@@ -17,12 +17,15 @@ security:
         main:
             lazy: true
             provider: app_user_provider
-            entry_point: App\Security\AppCustomAuthenticator
+            entry_point: form_login #App\Security\AppCustomAuthenticator
             form_login:
                 # "app_login" is the name of the route created previously
                 login_path: app_login
                 check_path: app_login
-            custom_authenticator: App\Security\AppCustomAuthenticator
+                username_parameter: email
+                password_parameter: password
+                enable_csrf: true
+            #custom_authenticator: App\Security\AppCustomAuthenticator
             logout:
                 target: /home
             remember_me:
