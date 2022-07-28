@@ -72,6 +72,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
+   // private $plainPassword;
 
     /**
      * A visual identifier that represents this user.
@@ -233,4 +234,20 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
+
+//    /**
+//     * @return mixed
+//     */
+//    public function getPlainPassword(): ?string
+//    {
+//        return $this->plainPassword;
+//    }
+//
+//    /**
+//     * @param mixed $plainPassword
+//     */
+//    public function setPlainPassword($plainPassword): void
+//    {
+//        $this->plainPassword = $plainPassword;
+//    }
 }
